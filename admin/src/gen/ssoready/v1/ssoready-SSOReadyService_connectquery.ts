@@ -4,7 +4,167 @@
 // @ts-nocheck
 
 import { Empty, MethodKind } from "@bufbuild/protobuf";
-import { AdminCreateSAMLConnectionRequest, AdminCreateSAMLConnectionResponse, AdminCreateSCIMDirectoryRequest, AdminCreateSCIMDirectoryResponse, AdminCreateTestModeSAMLFlowRequest, AdminCreateTestModeSAMLFlowResponse, AdminGetSAMLConnectionRequest, AdminGetSAMLConnectionResponse, AdminGetSAMLFlowRequest, AdminGetSAMLFlowResponse, AdminGetSCIMDirectoryRequest, AdminGetSCIMDirectoryResponse, AdminListSAMLConnectionsRequest, AdminListSAMLConnectionsResponse, AdminListSAMLFlowsRequest, AdminListSAMLFlowsResponse, AdminListSCIMDirectoriesRequest, AdminListSCIMDirectoriesResponse, AdminParseSAMLMetadataRequest, AdminParseSAMLMetadataResponse, AdminRedeemOneTimeTokenRequest, AdminRedeemOneTimeTokenResponse, AdminRotateSCIMDirectoryBearerTokenRequest, AdminRotateSCIMDirectoryBearerTokenResponse, AdminUpdateSAMLConnectionRequest, AdminUpdateSAMLConnectionResponse, AdminUpdateSCIMDirectoryRequest, AdminUpdateSCIMDirectoryResponse, AdminWhoamiRequest, AdminWhoamiResponse, APIKey, AppCreateAdminSetupURLRequest, AppCreateAdminSetupURLResponse, AppCreateOrganizationRequest, AppCreateSAMLConnectionRequest, AppCreateSCIMDirectoryRequest, AppDeleteOrganizationRequest, AppDeleteSAMLConnectionRequest, AppDeleteSCIMDirectoryRequest, AppGetAdminSettingsRequest, AppGetAdminSettingsResponse, AppGetOrganizationRequest, AppGetSAMLConnectionRequest, AppGetSAMLFlowRequest, AppGetSCIMDirectoryRequest, AppGetSCIMGroupRequest, AppGetSCIMRequestRequest, AppGetSCIMRequestResponse, AppGetSCIMUserRequest, AppListOrganizationsRequest, AppListOrganizationsResponse, AppListSAMLConnectionsRequest, AppListSAMLConnectionsResponse, AppListSAMLFlowsRequest, AppListSAMLFlowsResponse, AppListSCIMDirectoriesRequest, AppListSCIMDirectoriesResponse, AppListSCIMGroupsRequest, AppListSCIMGroupsResponse, AppListSCIMRequestsRequest, AppListSCIMRequestsResponse, AppListSCIMUsersRequest, AppListSCIMUsersResponse, AppRotateSCIMDirectoryBearerTokenRequest, AppRotateSCIMDirectoryBearerTokenResponse, AppUpdateAdminSettingsLogoRequest, AppUpdateAdminSettingsLogoResponse, AppUpdateAdminSettingsRequest, AppUpdateAdminSettingsResponse, AppUpdateOrganizationRequest, AppUpdateSAMLConnectionRequest, AppUpdateSCIMDirectoryRequest, CheckEnvironmentCustomDomainSettingsCertificatesRequest, CheckEnvironmentCustomDomainSettingsCertificatesResponse, CreateAPIKeyRequest, CreateEnvironmentRequest, CreateOrganizationRequest, CreateOrganizationResponse, CreateSAMLConnectionRequest, CreateSAMLConnectionResponse, CreateSAMLOAuthClientRequest, CreateSCIMDirectoryRequest, CreateSCIMDirectoryResponse, CreateSetupURLRequest, CreateSetupURLResponse, DeleteAPIKeyRequest, DeleteSAMLOAuthClientRequest, Environment, GetAPIKeyRequest, GetAppOrganizationRequest, GetAppOrganizationResponse, GetEnvironmentCustomDomainSettingsRequest, GetEnvironmentCustomDomainSettingsResponse, GetEnvironmentRequest, GetOnboardingStateRequest, GetOnboardingStateResponse, GetOrganizationRequest, GetOrganizationResponse, GetSAMLConnectionRequest, GetSAMLConnectionResponse, GetSAMLOAuthClientRequest, GetSAMLRedirectURLRequest, GetSAMLRedirectURLResponse, GetSCIMDirectoryRequest, GetSCIMDirectoryResponse, GetSCIMGroupRequest, GetSCIMGroupResponse, GetSCIMUserRequest, GetSCIMUserResponse, ListAPIKeysRequest, ListAPIKeysResponse, ListAppUsersRequest, ListAppUsersResponse, ListEnvironmentsRequest, ListEnvironmentsResponse, ListOrganizationsRequest, ListOrganizationsResponse, ListSAMLConnectionsRequest, ListSAMLConnectionsResponse, ListSAMLOAuthClientsRequest, ListSAMLOAuthClientsResponse, ListSCIMDirectoriesRequest, ListSCIMDirectoriesResponse, ListSCIMGroupsRequest, ListSCIMGroupsResponse, ListSCIMUsersRequest, ListSCIMUsersResponse, OnboardingGetSAMLRedirectURLRequest, OnboardingRedeemSAMLAccessCodeRequest, Organization, ParseSAMLMetadataRequest, ParseSAMLMetadataResponse, RedeemSAMLAccessCodeRequest, RedeemSAMLAccessCodeResponse, RotateSCIMDirectoryBearerTokenRequest, RotateSCIMDirectoryBearerTokenResponse, SAMLConnection, SAMLFlow, SAMLOAuthClient, SCIMDirectory, SCIMGroup, SCIMUser, SignInRequest, SignInResponse, SignOutRequest, SignOutResponse, UpdateEnvironmentCustomDomainSettingsRequest, UpdateEnvironmentCustomDomainSettingsResponse, UpdateEnvironmentRequest, UpdateOnboardingStateRequest, UpdateOrganizationRequest, UpdateOrganizationResponse, UpdateSAMLConnectionRequest, UpdateSAMLConnectionResponse, UpdateSCIMDirectoryRequest, UpdateSCIMDirectoryResponse, VerifyEmailRequest, WhoamiRequest, WhoamiResponse } from "./ssoready_pb.js";
+import {
+  AdminCreateSAMLConnectionRequest,
+  AdminCreateSAMLConnectionResponse,
+  AdminCreateSCIMDirectoryRequest,
+  AdminCreateSCIMDirectoryResponse,
+  AdminCreateTestModeSAMLFlowRequest,
+  AdminCreateTestModeSAMLFlowResponse,
+  AdminGetSAMLConnectionRequest,
+  AdminGetSAMLConnectionResponse,
+  AdminGetSAMLFlowRequest,
+  AdminGetSAMLFlowResponse,
+  AdminGetSCIMDirectoryRequest,
+  AdminGetSCIMDirectoryResponse,
+  AdminListSAMLConnectionsRequest,
+  AdminListSAMLConnectionsResponse,
+  AdminListSAMLFlowsRequest,
+  AdminListSAMLFlowsResponse,
+  AdminListSCIMDirectoriesRequest,
+  AdminListSCIMDirectoriesResponse,
+  AdminParseSAMLMetadataRequest,
+  AdminParseSAMLMetadataResponse,
+  AdminRedeemOneTimeTokenRequest,
+  AdminRedeemOneTimeTokenResponse,
+  AdminRotateSCIMDirectoryBearerTokenRequest,
+  AdminRotateSCIMDirectoryBearerTokenResponse,
+  AdminUpdateSAMLConnectionRequest,
+  AdminUpdateSAMLConnectionResponse,
+  AdminUpdateSCIMDirectoryRequest,
+  AdminUpdateSCIMDirectoryResponse,
+  AdminWhoamiRequest,
+  AdminWhoamiResponse,
+  APIKey,
+  AppCreateAdminSetupURLRequest,
+  AppCreateAdminSetupURLResponse,
+  AppCreateOrganizationRequest,
+  AppCreateSAMLConnectionRequest,
+  AppCreateSCIMDirectoryRequest,
+  AppDeleteOrganizationRequest,
+  AppDeleteSAMLConnectionRequest,
+  AppDeleteSCIMDirectoryRequest,
+  AppGetAdminSettingsRequest,
+  AppGetAdminSettingsResponse,
+  AppGetOrganizationRequest,
+  AppGetSAMLConnectionRequest,
+  AppGetSAMLFlowRequest,
+  AppGetSCIMDirectoryRequest,
+  AppGetSCIMGroupRequest,
+  AppGetSCIMRequestRequest,
+  AppGetSCIMRequestResponse,
+  AppGetSCIMUserRequest,
+  AppListOrganizationsRequest,
+  AppListOrganizationsResponse,
+  AppListSAMLConnectionsRequest,
+  AppListSAMLConnectionsResponse,
+  AppListSAMLFlowsRequest,
+  AppListSAMLFlowsResponse,
+  AppListSCIMDirectoriesRequest,
+  AppListSCIMDirectoriesResponse,
+  AppListSCIMGroupsRequest,
+  AppListSCIMGroupsResponse,
+  AppListSCIMRequestsRequest,
+  AppListSCIMRequestsResponse,
+  AppListSCIMUsersRequest,
+  AppListSCIMUsersResponse,
+  AppRotateSCIMDirectoryBearerTokenRequest,
+  AppRotateSCIMDirectoryBearerTokenResponse,
+  AppUpdateAdminSettingsLogoRequest,
+  AppUpdateAdminSettingsLogoResponse,
+  AppUpdateAdminSettingsRequest,
+  AppUpdateAdminSettingsResponse,
+  AppUpdateOrganizationRequest,
+  AppUpdateSAMLConnectionRequest,
+  AppUpdateSCIMDirectoryRequest,
+  CheckEnvironmentCustomDomainSettingsCertificatesRequest,
+  CheckEnvironmentCustomDomainSettingsCertificatesResponse,
+  CreateAPIKeyRequest,
+  CreateEnvironmentRequest,
+  CreateOrganizationRequest,
+  CreateOrganizationResponse,
+  CreateSAMLConnectionRequest,
+  CreateSAMLConnectionResponse,
+  CreateSAMLOAuthClientRequest,
+  CreateSCIMDirectoryRequest,
+  CreateSCIMDirectoryResponse,
+  CreateSetupURLRequest,
+  CreateSetupURLResponse,
+  DeleteAPIKeyRequest,
+  DeleteSAMLOAuthClientRequest,
+  Environment,
+  GetAPIKeyRequest,
+  GetAppOrganizationRequest,
+  GetAppOrganizationResponse,
+  GetEnvironmentCustomDomainSettingsRequest,
+  GetEnvironmentCustomDomainSettingsResponse,
+  GetEnvironmentRequest,
+  GetOnboardingStateRequest,
+  GetOnboardingStateResponse,
+  GetOrganizationRequest,
+  GetOrganizationResponse,
+  GetSAMLConnectionRequest,
+  GetSAMLConnectionResponse,
+  GetSAMLOAuthClientRequest,
+  GetSAMLRedirectURLRequest,
+  GetSAMLRedirectURLResponse,
+  GetSCIMDirectoryRequest,
+  GetSCIMDirectoryResponse,
+  GetSCIMGroupRequest,
+  GetSCIMGroupResponse,
+  GetSCIMUserRequest,
+  GetSCIMUserResponse,
+  ListAPIKeysRequest,
+  ListAPIKeysResponse,
+  ListAppUsersRequest,
+  ListAppUsersResponse,
+  ListEnvironmentsRequest,
+  ListEnvironmentsResponse,
+  ListOrganizationsRequest,
+  ListOrganizationsResponse,
+  ListSAMLConnectionsRequest,
+  ListSAMLConnectionsResponse,
+  ListSAMLOAuthClientsRequest,
+  ListSAMLOAuthClientsResponse,
+  ListSCIMDirectoriesRequest,
+  ListSCIMDirectoriesResponse,
+  ListSCIMGroupsRequest,
+  ListSCIMGroupsResponse,
+  ListSCIMUsersRequest,
+  ListSCIMUsersResponse,
+  OnboardingGetSAMLRedirectURLRequest,
+  OnboardingRedeemSAMLAccessCodeRequest,
+  Organization,
+  ParseSAMLMetadataRequest,
+  ParseSAMLMetadataResponse,
+  RedeemSAMLAccessCodeRequest,
+  RedeemSAMLAccessCodeResponse,
+  RotateSCIMDirectoryBearerTokenRequest,
+  RotateSCIMDirectoryBearerTokenResponse,
+  SAMLConnection,
+  SAMLFlow,
+  SAMLOAuthClient,
+  SCIMDirectory,
+  SCIMGroup,
+  SCIMUser,
+  SignInRequest,
+  SignInResponse,
+  SignOutRequest,
+  SignOutResponse,
+  UpdateEnvironmentCustomDomainSettingsRequest,
+  UpdateEnvironmentCustomDomainSettingsResponse,
+  UpdateEnvironmentRequest,
+  UpdateOnboardingStateRequest,
+  UpdateOrganizationRequest,
+  UpdateOrganizationResponse,
+  UpdateSAMLConnectionRequest,
+  UpdateSAMLConnectionResponse,
+  UpdateSCIMDirectoryRequest,
+  UpdateSCIMDirectoryResponse,
+  VerifyEmailRequest,
+  WhoamiRequest,
+  WhoamiResponse,
+} from "./ssoready_pb.js";
 
 /**
  * Gets a SAML initiation URL to redirect your users to.
@@ -18,8 +178,8 @@ export const getSAMLRedirectURL = {
   I: GetSAMLRedirectURLRequest,
   O: GetSAMLRedirectURLResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -34,8 +194,8 @@ export const redeemSAMLAccessCode = {
   I: RedeemSAMLAccessCodeRequest,
   O: RedeemSAMLAccessCodeResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -50,8 +210,8 @@ export const listSCIMUsers = {
   I: ListSCIMUsersRequest,
   O: ListSCIMUsersResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -66,8 +226,8 @@ export const getSCIMUser = {
   I: GetSCIMUserRequest,
   O: GetSCIMUserResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -82,8 +242,8 @@ export const listSCIMGroups = {
   I: ListSCIMGroupsRequest,
   O: ListSCIMGroupsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -98,8 +258,8 @@ export const getSCIMGroup = {
   I: GetSCIMGroupRequest,
   O: GetSCIMGroupResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -114,8 +274,8 @@ export const listOrganizations = {
   I: ListOrganizationsRequest,
   O: ListOrganizationsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -130,8 +290,8 @@ export const getOrganization = {
   I: GetOrganizationRequest,
   O: GetOrganizationResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -146,8 +306,8 @@ export const createOrganization = {
   I: CreateOrganizationRequest,
   O: CreateOrganizationResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -162,8 +322,8 @@ export const updateOrganization = {
   I: UpdateOrganizationRequest,
   O: UpdateOrganizationResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -180,8 +340,8 @@ export const createSetupURL = {
   I: CreateSetupURLRequest,
   O: CreateSetupURLResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -196,8 +356,8 @@ export const listSAMLConnections = {
   I: ListSAMLConnectionsRequest,
   O: ListSAMLConnectionsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -212,8 +372,8 @@ export const getSAMLConnection = {
   I: GetSAMLConnectionRequest,
   O: GetSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -228,8 +388,8 @@ export const createSAMLConnection = {
   I: CreateSAMLConnectionRequest,
   O: CreateSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -244,8 +404,8 @@ export const updateSAMLConnection = {
   I: UpdateSAMLConnectionRequest,
   O: UpdateSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -260,8 +420,8 @@ export const listSCIMDirectories = {
   I: ListSCIMDirectoriesRequest,
   O: ListSCIMDirectoriesResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -276,8 +436,8 @@ export const getSCIMDirectory = {
   I: GetSCIMDirectoryRequest,
   O: GetSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -292,8 +452,8 @@ export const createSCIMDirectory = {
   I: CreateSCIMDirectoryRequest,
   O: CreateSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -308,8 +468,8 @@ export const updateSCIMDirectory = {
   I: UpdateSCIMDirectoryRequest,
   O: UpdateSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -334,8 +494,8 @@ export const rotateSCIMDirectoryBearerToken = {
   I: RotateSCIMDirectoryBearerTokenRequest,
   O: RotateSCIMDirectoryBearerTokenResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -348,8 +508,8 @@ export const verifyEmail = {
   I: VerifyEmailRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -362,8 +522,8 @@ export const signIn = {
   I: SignInRequest,
   O: SignInResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -376,8 +536,8 @@ export const signOut = {
   I: SignOutRequest,
   O: SignOutResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -390,8 +550,8 @@ export const whoami = {
   I: WhoamiRequest,
   O: WhoamiResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -404,8 +564,8 @@ export const getOnboardingState = {
   I: GetOnboardingStateRequest,
   O: GetOnboardingStateResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -418,8 +578,8 @@ export const updateOnboardingState = {
   I: UpdateOnboardingStateRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -432,8 +592,8 @@ export const onboardingGetSAMLRedirectURL = {
   I: OnboardingGetSAMLRedirectURLRequest,
   O: GetSAMLRedirectURLResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -446,8 +606,8 @@ export const onboardingRedeemSAMLAccessCode = {
   I: OnboardingRedeemSAMLAccessCodeRequest,
   O: RedeemSAMLAccessCodeResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -460,8 +620,8 @@ export const getAppOrganization = {
   I: GetAppOrganizationRequest,
   O: GetAppOrganizationResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -474,8 +634,8 @@ export const listAppUsers = {
   I: ListAppUsersRequest,
   O: ListAppUsersResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -488,8 +648,8 @@ export const listEnvironments = {
   I: ListEnvironmentsRequest,
   O: ListEnvironmentsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -502,8 +662,8 @@ export const getEnvironment = {
   I: GetEnvironmentRequest,
   O: Environment,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -516,8 +676,8 @@ export const createEnvironment = {
   I: CreateEnvironmentRequest,
   O: Environment,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -530,8 +690,8 @@ export const updateEnvironment = {
   I: UpdateEnvironmentRequest,
   O: Environment,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -544,8 +704,8 @@ export const getEnvironmentCustomDomainSettings = {
   I: GetEnvironmentCustomDomainSettingsRequest,
   O: GetEnvironmentCustomDomainSettingsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -558,8 +718,8 @@ export const updateEnvironmentCustomDomainSettings = {
   I: UpdateEnvironmentCustomDomainSettingsRequest,
   O: UpdateEnvironmentCustomDomainSettingsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -572,8 +732,8 @@ export const checkEnvironmentCustomDomainSettingsCertificates = {
   I: CheckEnvironmentCustomDomainSettingsCertificatesRequest,
   O: CheckEnvironmentCustomDomainSettingsCertificatesResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -586,8 +746,8 @@ export const listAPIKeys = {
   I: ListAPIKeysRequest,
   O: ListAPIKeysResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -600,8 +760,8 @@ export const getAPIKey = {
   I: GetAPIKeyRequest,
   O: APIKey,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -614,8 +774,8 @@ export const createAPIKey = {
   I: CreateAPIKeyRequest,
   O: APIKey,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -628,8 +788,8 @@ export const deleteAPIKey = {
   I: DeleteAPIKeyRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -642,8 +802,8 @@ export const listSAMLOAuthClients = {
   I: ListSAMLOAuthClientsRequest,
   O: ListSAMLOAuthClientsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -656,8 +816,8 @@ export const getSAMLOAuthClient = {
   I: GetSAMLOAuthClientRequest,
   O: SAMLOAuthClient,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -670,8 +830,8 @@ export const createSAMLOAuthClient = {
   I: CreateSAMLOAuthClientRequest,
   O: SAMLOAuthClient,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -684,8 +844,8 @@ export const deleteSAMLOAuthClient = {
   I: DeleteSAMLOAuthClientRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -698,8 +858,8 @@ export const appListOrganizations = {
   I: AppListOrganizationsRequest,
   O: AppListOrganizationsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -712,8 +872,8 @@ export const appGetOrganization = {
   I: AppGetOrganizationRequest,
   O: Organization,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -726,8 +886,8 @@ export const appCreateOrganization = {
   I: AppCreateOrganizationRequest,
   O: Organization,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -740,8 +900,8 @@ export const appUpdateOrganization = {
   I: AppUpdateOrganizationRequest,
   O: Organization,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -754,8 +914,8 @@ export const appDeleteOrganization = {
   I: AppDeleteOrganizationRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -768,8 +928,8 @@ export const appGetAdminSettings = {
   I: AppGetAdminSettingsRequest,
   O: AppGetAdminSettingsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -782,8 +942,8 @@ export const appUpdateAdminSettings = {
   I: AppUpdateAdminSettingsRequest,
   O: AppUpdateAdminSettingsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -796,8 +956,8 @@ export const appUpdateAdminSettingsLogo = {
   I: AppUpdateAdminSettingsLogoRequest,
   O: AppUpdateAdminSettingsLogoResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -810,8 +970,8 @@ export const appCreateAdminSetupURL = {
   I: AppCreateAdminSetupURLRequest,
   O: AppCreateAdminSetupURLResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -824,8 +984,8 @@ export const appListSAMLConnections = {
   I: AppListSAMLConnectionsRequest,
   O: AppListSAMLConnectionsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -838,8 +998,8 @@ export const appGetSAMLConnection = {
   I: AppGetSAMLConnectionRequest,
   O: SAMLConnection,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -852,8 +1012,8 @@ export const appCreateSAMLConnection = {
   I: AppCreateSAMLConnectionRequest,
   O: SAMLConnection,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -866,8 +1026,8 @@ export const appUpdateSAMLConnection = {
   I: AppUpdateSAMLConnectionRequest,
   O: SAMLConnection,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -880,8 +1040,8 @@ export const appDeleteSAMLConnection = {
   I: AppDeleteSAMLConnectionRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -894,8 +1054,8 @@ export const appListSAMLFlows = {
   I: AppListSAMLFlowsRequest,
   O: AppListSAMLFlowsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -908,8 +1068,8 @@ export const appGetSAMLFlow = {
   I: AppGetSAMLFlowRequest,
   O: SAMLFlow,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -922,8 +1082,8 @@ export const parseSAMLMetadata = {
   I: ParseSAMLMetadataRequest,
   O: ParseSAMLMetadataResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -936,8 +1096,8 @@ export const appListSCIMDirectories = {
   I: AppListSCIMDirectoriesRequest,
   O: AppListSCIMDirectoriesResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -950,8 +1110,8 @@ export const appGetSCIMDirectory = {
   I: AppGetSCIMDirectoryRequest,
   O: SCIMDirectory,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -964,8 +1124,8 @@ export const appCreateSCIMDirectory = {
   I: AppCreateSCIMDirectoryRequest,
   O: SCIMDirectory,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -978,8 +1138,8 @@ export const appUpdateSCIMDirectory = {
   I: AppUpdateSCIMDirectoryRequest,
   O: SCIMDirectory,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -992,8 +1152,8 @@ export const appRotateSCIMDirectoryBearerToken = {
   I: AppRotateSCIMDirectoryBearerTokenRequest,
   O: AppRotateSCIMDirectoryBearerTokenResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1006,8 +1166,8 @@ export const appDeleteSCIMDirectory = {
   I: AppDeleteSCIMDirectoryRequest,
   O: Empty,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1020,8 +1180,8 @@ export const appListSCIMUsers = {
   I: AppListSCIMUsersRequest,
   O: AppListSCIMUsersResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1034,8 +1194,8 @@ export const appGetSCIMUser = {
   I: AppGetSCIMUserRequest,
   O: SCIMUser,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1048,8 +1208,8 @@ export const appListSCIMGroups = {
   I: AppListSCIMGroupsRequest,
   O: AppListSCIMGroupsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1062,8 +1222,8 @@ export const appGetSCIMGroup = {
   I: AppGetSCIMGroupRequest,
   O: SCIMGroup,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1076,8 +1236,8 @@ export const appListSCIMRequests = {
   I: AppListSCIMRequestsRequest,
   O: AppListSCIMRequestsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1090,8 +1250,8 @@ export const appGetSCIMRequest = {
   I: AppGetSCIMRequestRequest,
   O: AppGetSCIMRequestResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1104,8 +1264,8 @@ export const adminRedeemOneTimeToken = {
   I: AdminRedeemOneTimeTokenRequest,
   O: AdminRedeemOneTimeTokenResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1118,8 +1278,8 @@ export const adminWhoami = {
   I: AdminWhoamiRequest,
   O: AdminWhoamiResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1132,8 +1292,8 @@ export const adminCreateTestModeSAMLFlow = {
   I: AdminCreateTestModeSAMLFlowRequest,
   O: AdminCreateTestModeSAMLFlowResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1146,8 +1306,8 @@ export const adminListSAMLConnections = {
   I: AdminListSAMLConnectionsRequest,
   O: AdminListSAMLConnectionsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1160,8 +1320,8 @@ export const adminGetSAMLConnection = {
   I: AdminGetSAMLConnectionRequest,
   O: AdminGetSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1174,8 +1334,8 @@ export const adminCreateSAMLConnection = {
   I: AdminCreateSAMLConnectionRequest,
   O: AdminCreateSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1188,8 +1348,8 @@ export const adminUpdateSAMLConnection = {
   I: AdminUpdateSAMLConnectionRequest,
   O: AdminUpdateSAMLConnectionResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1202,8 +1362,8 @@ export const adminParseSAMLMetadata = {
   I: AdminParseSAMLMetadataRequest,
   O: AdminParseSAMLMetadataResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1216,8 +1376,8 @@ export const adminListSAMLFlows = {
   I: AdminListSAMLFlowsRequest,
   O: AdminListSAMLFlowsResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1230,8 +1390,8 @@ export const adminGetSAMLFlow = {
   I: AdminGetSAMLFlowRequest,
   O: AdminGetSAMLFlowResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1244,8 +1404,8 @@ export const adminListSCIMDirectories = {
   I: AdminListSCIMDirectoriesRequest,
   O: AdminListSCIMDirectoriesResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1258,8 +1418,8 @@ export const adminGetSCIMDirectory = {
   I: AdminGetSCIMDirectoryRequest,
   O: AdminGetSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1272,8 +1432,8 @@ export const adminCreateSCIMDirectory = {
   I: AdminCreateSCIMDirectoryRequest,
   O: AdminCreateSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1286,8 +1446,8 @@ export const adminUpdateSCIMDirectory = {
   I: AdminUpdateSCIMDirectoryRequest,
   O: AdminUpdateSCIMDirectoryResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
 
 /**
@@ -1300,6 +1460,6 @@ export const adminRotateSCIMDirectoryBearerToken = {
   I: AdminRotateSCIMDirectoryBearerTokenRequest,
   O: AdminRotateSCIMDirectoryBearerTokenResponse,
   service: {
-    typeName: "ssoready.v1.SSOReadyService"
-  }
+    typeName: "ssoready.v1.SSOReadyService",
+  },
 } as const;
